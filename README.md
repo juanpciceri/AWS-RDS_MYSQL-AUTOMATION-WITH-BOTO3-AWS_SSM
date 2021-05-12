@@ -135,6 +135,20 @@ Secrets manager has an advatage over AWS parameter store that is another service
 
 Figure 12. Store authentication credentials for RDS database.
 
+Click next and give your secret a name.
+
+![image](https://user-images.githubusercontent.com/32818490/118010145-bdd15180-b31c-11eb-96ac-e41a4f3f2568.png)
+
+Figure 13.Name for secret
+
+You can check on the AWS secrets manager console what information is stored for your recently created secret, as you may imagine. The secret will store the DB endpoint,user,
+password and port used by the RDS.
+
+![image](https://user-images.githubusercontent.com/32818490/118010707-4bad3c80-b31d-11eb-94c9-db0cbca312de.png)
+
+Figure 14. Info stored as secret.
+
+
 
 
 
