@@ -15,3 +15,27 @@ Image 1 shows the initial architecture for the infrastructure that will be deplo
 
 Image 2. Architecture part 2.
 
+The following are the required steps to deploy a MYSQL DB with AWS RDS.
+
+1. Go to AWS CONSOLE > RDS DATABASE > CREATE DATABASE.
+2. Select MySQL engine as show below.
+
+![image](https://user-images.githubusercontent.com/32818490/117997490-0256f000-b311-11eb-8496-f4045311efae.png)
+
+Image 3. MySQL Engine for RDS
+
+3. Select a free tier RDS for testing purposes and set up user and password for your DB
+
+![image](https://user-images.githubusercontent.com/32818490/117997772-46e28b80-b311-11eb-95ad-4f184eb2b208.png)
+
+Image 4. Free tier elegible, user/password
+
+4. Make sure you put No as public access
+
+![image](https://user-images.githubusercontent.com/32818490/117997980-772a2a00-b311-11eb-877a-c8dd64a72633.png)
+
+Image 5. Deny public access to DB
+
+5. Click create
+
+
