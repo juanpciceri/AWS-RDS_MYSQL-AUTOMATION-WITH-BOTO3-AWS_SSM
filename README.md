@@ -38,4 +38,37 @@ Image 5. Deny public access to DB
 
 5. Click create
 
+At this point you must wait for a couple of minutes for AWS to set up the environment you just configure. When the process of setting up your DB is complete, you will see the status as available for your DB.
+
+![image](https://user-images.githubusercontent.com/32818490/117998520-fa4b8000-b311-11eb-9a6c-ebcdbfe54688.png)
+
+Image 6. DB available.
+
+The important information to be able to connect to his EC2 instance is the endpoint and port for connection. You could check this information on your AWS console. Sensitive information such as user and password is not shown on the AWS console interface, so make sure you kept this info secure.
+
+![image](https://user-images.githubusercontent.com/32818490/117999010-6b8b3300-b312-11eb-8649-ae1a24c5090f.png)
+
+Image 7. Endpoint and port for RDS instance.
+
+From the public EC2 instance, I will try to connect to my RDS Database. for this purpose you must follow along the following steps:
+
+1.Make sure you have configure your AWS CLI keys on AWS IAM, giving to this the least privileges; and set them up correctly on your EC2 with $aws configure command. 
+2.Open a rule on the security group of the RDS instance allowing connections comming from the private IP belonging to the public EC2, the port is the one shown on figure 7.  
+3.Install MySQL Client on your EC2. The command for installing is:
+
+$sudo yum install mysql
+
+4.Make sure python3 and boto3 library is installed if you want to follow along.
+5. Connect to your DB using the following syntax.
+PROMPT> mysql -h <endpoint> -P 3306 -u <mymasteruser> -p
+It will ask for your password, after entering the correct password you will have the following prompt.
+  
+![image](https://user-images.githubusercontent.com/32818490/118001162-76df5e00-b314-11eb-8c4a-c0b5bce939c9.png)
+
+Image 8. Coneection successfull from your public EC2 to your private RDS Instance. Hurray!!
+
+
+
+
+
 
