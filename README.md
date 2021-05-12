@@ -59,8 +59,11 @@ From the public EC2 instance, I will try to connect to my RDS Database. for this
 $sudo yum install mysql
 
 4.Make sure python3 and boto3 library is installed if you want to follow along.
+
 5. Connect to your DB using the following syntax.
+
 PROMPT> mysql -h <endpoint> -P 3306 -u <mymasteruser> -p
+  
 It will ask for your password, after entering the correct password you will have the following prompt.
   
 ![image](https://user-images.githubusercontent.com/32818490/118001162-76df5e00-b314-11eb-8c4a-c0b5bce939c9.png)
