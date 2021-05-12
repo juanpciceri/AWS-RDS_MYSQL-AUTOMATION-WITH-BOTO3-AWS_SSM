@@ -125,7 +125,15 @@ Create the following script on your ec2 linux instance and name it with a .py ex
 Figure 11. Script to connect and insert attributes on your DB's tables.
 
 I think you will not have any problem trying to figure out what is the purpose of the variables declared and the methods called. As you see we could connect and insert
-attributes thanks to mysql.connector library.
+attributes thanks to mysql.connector library. Bit as you must imagining right now there is a security problem cause we are saving some sensible information for the database connection in plain text. To overcome this we will use SSM Secrets manager that will encrypt this sensible data and will protect our DB against user and password leaks.
+
+# USING SECRETS MANAGER FOR STORING RDS SECRETS
+
+Secrets manager has an advatage over AWS parameter store that is another service of AWS for store sensible data, and that is its integration with RDS. On the following figure you could see that there exist an specific option to configure a secret for RDS. You must go to AWS Secrets Manager>Create new Secret and select Credentials for RDS Database.
+
+![image](https://user-images.githubusercontent.com/32818490/118009820-69c66d00-b31c-11eb-95d0-0537030242a1.png)
+
+Figure 12. Store authentication credentials for RDS database.
 
 
 
