@@ -155,5 +155,8 @@ Figure 14. Info stored as secret.
 
 Figure 15. Script modified for integrating with secrets manager.
 
+After executing the script with python3, we can connect to the DB again following steps on "How to connect to the RDS DB" section to check if there is another field on the table that we created on the DB movies.
 
+![image](https://user-images.githubusercontent.com/32818490/118013004-aa73b580-b31f-11eb-865a-30a39c1e223d.png)
 
+Figure 16. New entry inserted using pytohn3 and boto3 with mysql.connector libraries
