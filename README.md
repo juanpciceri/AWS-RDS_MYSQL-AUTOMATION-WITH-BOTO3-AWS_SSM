@@ -65,8 +65,45 @@ It will ask for your password, after entering the correct password you will have
   
 ![image](https://user-images.githubusercontent.com/32818490/118001162-76df5e00-b314-11eb-8c4a-c0b5bce939c9.png)
 
-Image 8. Coneection successfull from your public EC2 to your private RDS Instance. Hurray!!
+Image 8. Connection successfull from your public EC2 to your private RDS Instance. Hurray!!
 
+The next part of this tutorial will create a database named "movies" and a table that will contain information of movies like tittle, director, genre and year of release.
+Execute the following commands to accomplish that task.
+
+1. Create the DB "movies"
+
+CREATE DATABASE movies;
+
+2. Confirm the DB was created
+
+SHOW DATABASE;
+
+![image](https://user-images.githubusercontent.com/32818490/118004126-303f3300-b317-11eb-83d2-cc0676c39775.png)
+
+Figure. 9 Creation of DB "movies"
+
+3. Define tittle, director, genre and year of realse together with their data types.
+
+In the process of creating a table, you need to specify the following information:
+
+a. Column names – We are creating the title, genre, director, and release year columns for our table.
+b. Varchar of the columns containing characters – Specifies the maximum number of characters stored in the column.
+c. The integer of the columns containing numbers – Defines numeric variables holding whole numbers.
+d. Not null rule – Indicates that each new record must contain information for the column.
+e. Primary key – Sets a column that defines a record
+
+Use the database movies with the following command:
+
+USE movies;
+
+Create a table using the CREATE command. Using the information from our movies example, the command is:
+
+CREATE TABLE movies(title VARCHAR(50) NOT NULL,genre VARCHAR(30) NOT NULL,director VARCHAR(60) NOT NULL,release_year INT NOT NULL,PRIMARY KEY(title));
+
+
+![image](https://user-images.githubusercontent.com/32818490/118004785-c5422c00-b317-11eb-898e-70f1aa5e5fe1.png)
+
+Figura 10. Commands to define table within DB movies.
 
 
 
