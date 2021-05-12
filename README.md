@@ -1,6 +1,6 @@
 # MySQL RDS Configuration, deployment and automation with python and secrets manager.
 
-#ARCHITECTURE DESCRIPTION AND OBJECTIVES DEFINITION
+# ARCHITECTURE DESCRIPTION AND OBJECTIVES DEFINITION
 
 In this repo I will show how to create and connect to  a mySQL DB running on AWS RDS. The automation job will consist on inserting records to the DB and connect to it with python; for last we will introduce a way to secure sensible information with AWS SSM -Secrets manager- that I will utilize as a secret store for the RDS's enpoint, user and
 password.
