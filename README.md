@@ -149,7 +149,11 @@ password and port used by the RDS.
 Figure 14. Info stored as secret.
 
 
+# Modify script for retrieve user,password and endpoint in an encrypted way using Secrets Manager
 
+![image](https://user-images.githubusercontent.com/32818490/118012736-5ff23900-b31f-11eb-976c-7d78d0e743e8.png)
+
+Figure 15. Script modified for integrating with secrets manager.
 
 
 
