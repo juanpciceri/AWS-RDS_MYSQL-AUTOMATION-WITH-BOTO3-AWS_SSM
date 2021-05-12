@@ -108,7 +108,7 @@ CREATE TABLE movies(title VARCHAR(50) NOT NULL,genre VARCHAR(30) NOT NULL,direct
 
 Figura 10. Commands to define table within DB movies.
 
-
+# AWS-RDS_MYSQL-AUTOMATION-WITH-BOTO3-AWS_SSM
 
 
 
