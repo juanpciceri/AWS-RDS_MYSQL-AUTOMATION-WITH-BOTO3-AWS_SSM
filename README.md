@@ -2,7 +2,7 @@
 
 # ARCHITECTURE DESCRIPTION AND OBJECTIVES DEFINITION
 
-In this repo I will show how to create and connect to  a mySQL DB running on AWS RDS. The automation job will consist on inserting records to the DB and connect to it with python; for last we will introduce a way to secure sensible information with AWS SSM -Secrets manager- that I will utilize as a secret store for the RDS's enpoint, user and
+In this repo I will show how to create and connect to  a mySQL DB running on AWS RDS. The automation job will consist on connecting to the Database and insert records to it using python3, boto3 and mysql.connector libraries; for last we will introduce a way to secure sensible information with AWS SSM -Secrets manager- that I will utilize as a secret store for the RDS's enpoint, user and
 password.
 
 1. We will create a DB that will be only accesible from an specific VPC, meaning that the RDS Database will only accept connections originating from a private IP attached to one of our EC2 instances.
@@ -16,6 +16,8 @@ Image 1 shows the initial architecture for the infrastructure that will be deplo
 ![image](https://user-images.githubusercontent.com/32818490/117996661-544b4600-b310-11eb-8e05-45a1bdb5e47f.png)
 
 Image 2. Architecture part 2.
+
+# Deployment of MySQL RDS Database
 
 The following are the required steps to deploy a MYSQL DB with AWS RDS.
 
@@ -46,6 +48,8 @@ At this point you must wait for a couple of minutes for AWS to set up the enviro
 
 Image 6. DB available.
 
+# How to connect to the RDS DB
+
 The important information to be able to connect to his EC2 instance is the endpoint and port for connection. You could check this information on your AWS console. Sensitive information such as user and password is not shown on the AWS console interface, so make sure you kept this info secure.
 
 ![image](https://user-images.githubusercontent.com/32818490/117999010-6b8b3300-b312-11eb-8649-ae1a24c5090f.png)
@@ -71,6 +75,8 @@ It will ask for your password, after entering the correct password you will have
 ![image](https://user-images.githubusercontent.com/32818490/118001162-76df5e00-b314-11eb-8c4a-c0b5bce939c9.png)
 
 Image 8. Connection successfull from your public EC2 to your private RDS Instance. Hurray!!
+
+# CREATE A DATABASE AND TABLE FOR DEVELOPING/TESTING
 
 The next part of this tutorial will create a database named "movies" and a table that will contain information of movies like tittle, director, genre and year of release.
 Execute the following commands to accomplish that task.
@@ -110,7 +116,16 @@ CREATE TABLE movies(title VARCHAR(50) NOT NULL,genre VARCHAR(30) NOT NULL,direct
 
 Figura 10. Commands to define table within DB movies.
 
-# AWS-RDS_MYSQL-AUTOMATION-WITH-BOTO3-AWS_SSM
+# USE PYTHON TO CONNECT AND INSERT INFORMATION ON THE TABLE
+
+Create the following script on your ec2 linux instance and name it with a .py extension
+
+![image](https://user-images.githubusercontent.com/32818490/118008617-3f27e480-b31b-11eb-9a98-7e33c36a3696.png)
+
+Figure 11. Script to connect and insert attributes on your DB's tables.
+
+I think you will not have any problem trying to figure out what is the purpose of the variables declared and the methods called. As you see we could connect and insert
+attributes thanks to mysql.connector library.
 
 
 
