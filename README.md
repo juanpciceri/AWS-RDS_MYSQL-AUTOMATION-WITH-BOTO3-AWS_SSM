@@ -62,7 +62,7 @@ $sudo yum install mysql
 
 5. Connect to your DB using the following syntax.
 
-PROMPT> mysql -h <endpoint> -P 3306 -u <mymasteruser> -p
+PROMPT> mysql -h DBendpoint -P 3306 -u mymasteruser -p
   
 It will ask for your password, after entering the correct password you will have the following prompt.
   
